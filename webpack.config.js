@@ -11,16 +11,16 @@ module.exports = {
 	module: {
 		loaders: [
 			{
-				test: /\.js/,
+				test: /\.js$/,
 				exclude: /node_modules/,
 				include: /src/,
-				loader: 'babel-loader'
+				loader: 'babel'
 			}
 		]
 	},
 	devServer: {
 		historyApiFallback: true,
 		contentBase: './',
-		port: 3000 
+		port: 3000
 	}
 };
