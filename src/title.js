@@ -1,6 +1,7 @@
 'use strict';
 import React from 'react';
 
+// Renderizando componentes utilizando funções puras
 const Title = ({ name, lastname }) => <h1>Olá {`${name} ${lastname}!`}</h1>;
 
 Title.defaultProps = {
