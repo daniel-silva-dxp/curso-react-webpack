@@ -1,9 +1,14 @@
 'user stric';
 import React from 'react';
+import Title from './title';
 
 const App = React.createClass({
 	render: function() {
-		return <h1>Daniel Silva!!!</h1>;
+		return (
+			<div>
+				<Title name="Daniel Silva" />
+			</div>
+		);
 	}
 });
 
