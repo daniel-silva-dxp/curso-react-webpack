@@ -3,6 +3,11 @@ import React from 'react';
 
 const Title = ({ name, lastname }) => <h1>Olá {`${name} ${lastname}!`}</h1>;
 
+Title.defaultProps = {
+	name: 'undefined',
+	lastname: 'undefined'
+};
+
 // const Title = React.createClass({
 // 	getDefaultProps: function() {
 // 		return {
