@@ -5,6 +5,8 @@ import MyHeader from './header';
 import Square from './square';
 import Event from './events';
 import Button from './button';
+import LikeButton from './like-button';
+import SearchButton from './search-button';
 
 const colors = [ '#F27781', '#18298C', '#04BF8A', '#F2CF1D', '#F29F05' ];
 
@@ -33,6 +35,10 @@ class App extends React.Component {
 				{colors.map((color, index) => {
 					return <Button key={index}>{color}</Button>;
 				})}
+
+				<h1>Composição</h1>
+				<LikeButton />
+				<SearchButton />
 			</div>
 		);
 	}
