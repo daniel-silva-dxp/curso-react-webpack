@@ -9,7 +9,7 @@ const Square = ({ color }) => {
 				background: color,
 				width: '50px',
 				height: '50px',
-				margin: '10px'
+				margin: '5px 1px'
 			}}
 		/>
 	);
