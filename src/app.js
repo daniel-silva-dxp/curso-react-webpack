@@ -13,6 +13,12 @@ const colors = [ '#F27781', '#18298C', '#04BF8A', '#F2CF1D', '#F29F05' ];
 
 // Renderizando componentes utilizando Classes
 class App extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			text: 'Daniel'
+		};
+	}
 	render() {
 		return (
 			<div className="container">
@@ -34,6 +40,8 @@ class App extends React.Component {
 				<LikeButton />
 				<SearchButton />
 				<EnterButton />
+				<h1 onClick={() => this.setState({ text: 'Daniel Silva' })}>State</h1>
+				{this.state.text}
 			</div>
 		);
 	}
