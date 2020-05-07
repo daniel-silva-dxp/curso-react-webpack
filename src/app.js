@@ -22,9 +22,6 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="container">
-				/*onClick={(e) => {
-					console.log(e.target);
-				}}*/
 				{[ 'red', 'green', 'blue' ].map((color) => <MyHeader key={color} color={color} />)}
 				<Title name="Daniel" lastname="Silva" />
 				{colors.map((color) => {
