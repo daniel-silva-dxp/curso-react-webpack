@@ -9,6 +9,7 @@ import LikeButton from './like-button';
 import SearchButton from './search-button';
 import EnterButton from './enter-button';
 import MyApp from './states';
+import Timer from './timer';
 
 const colors = [ '#F27781', '#18298C', '#04BF8A', '#F2CF1D', '#F29F05' ];
 
@@ -18,7 +19,8 @@ class App extends React.Component {
 		super();
 		this.state = {
 			text: 'Daniel',
-			color: 'yellow'
+			color: 'yellow',
+			showTimer: true
 		};
 	}
 	render() {
@@ -50,6 +52,9 @@ class App extends React.Component {
 						</Button>
 					))}
 				</div>
+				<MyApp />
+				{this.state.showTimer && <Timer />}
+				<button onClick={() => this.setState({ showTimer: !this.state.showTimer })}>Show / Hide timer</button>
 			</div>
 		);
 	}

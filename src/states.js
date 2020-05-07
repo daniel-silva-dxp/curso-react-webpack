@@ -15,11 +15,11 @@ class MyApp extends React.Component {
 		return (
 			<div>
 				<Square color={this.state.color} />
-				{[ 'red', 'green', blue ].map((color) => {
+				{[ 'red', 'green', 'blue' ].map((color) => (
 					<Button key={color} handleClick={() => this.setState({ color })}>
 						{color}
-					</Button>;
-				})}
+					</Button>
+				))}
 			</div>
 		);
 	}
