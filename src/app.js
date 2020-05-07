@@ -20,7 +20,8 @@ class App extends React.Component {
 		this.state = {
 			text: 'Daniel',
 			color: 'yellow',
-			showTimer: true
+			showTimer: true,
+			time: 0
 		};
 	}
 	render() {
@@ -53,8 +54,9 @@ class App extends React.Component {
 					))}
 				</div>
 				<MyApp />
-				{this.state.showTimer && <Timer />}
+				{this.state.showTimer && <Timer time={this.state.time} />}
 				<button onClick={() => this.setState({ showTimer: !this.state.showTimer })}>Show / Hide timer</button>
+				<button onClick={() => this.setState({ time: this.state.time + 10 })}>Change props</button>
 			</div>
 		);
 	}
