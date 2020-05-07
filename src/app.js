@@ -8,6 +8,7 @@ import Button from './button';
 import LikeButton from './like-button';
 import SearchButton from './search-button';
 import EnterButton from './enter-button';
+import MyApp from './states';
 
 const colors = [ '#F27781', '#18298C', '#04BF8A', '#F2CF1D', '#F29F05' ];
 
@@ -16,7 +17,8 @@ class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			text: 'Daniel'
+			text: 'Daniel',
+			color: 'yellow'
 		};
 	}
 	render() {
@@ -39,6 +41,15 @@ class App extends React.Component {
 				<EnterButton />
 				<h1 onClick={() => this.setState({ text: 'Daniel Silva' })}>State</h1>
 				{this.state.text}
+				<h1>Statefull e Stateless</h1>
+				<Square color={this.state.color} />
+				<div>
+					{colors.map((color, index) => (
+						<Button key={index} handleClick={() => this.setState({ color })}>
+							{color}
+						</Button>
+					))}
+				</div>
 			</div>
 		);
 	}
