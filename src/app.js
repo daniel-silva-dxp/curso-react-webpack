@@ -10,6 +10,7 @@ import SearchButton from './search-button';
 import EnterButton from './enter-button';
 import MyApp from './states';
 import Timer from './timer';
+import NewTimer from './newTimer';
 
 const colors = [ '#F27781', '#18298C', '#04BF8A', '#F2CF1D', '#F29F05' ];
 
@@ -57,6 +58,7 @@ class App extends React.Component {
 				{this.state.showTimer && <Timer time={this.state.time} />}
 				<button onClick={() => this.setState({ showTimer: !this.state.showTimer })}>Show / Hide timer</button>
 				<button onClick={() => this.setState({ time: this.state.time + 10 })}>Change props</button>
+				{this.state.showTimer && <NewTimer />}
 			</div>
 		);
 	}
