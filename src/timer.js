@@ -11,11 +11,11 @@ class Timer extends Component {
 	}
 
 	componentDidMount() {
-		this.timer = setInterval(() => {
-			this.setState({
-				time: this.state.time + 1
-			});
-		}, 1000);
+		// this.timer = setInterval(() => {
+		// 	this.setState({
+		// 		time: this.state.time + 1
+		// 	});
+		// }, 1000);
 	}
 
 	componentWillUnmount() {
@@ -33,6 +33,10 @@ class Timer extends Component {
 
 	componentWillUpdate(nextProps, nextState) {
 		console.log('componentWillUpdate', this.props, nextProps);
+	}
+
+	componentDidUpdate(prevProps, prevState) {
+		console.log('componentDidUpdate', this.props, prevProps);
 	}
 
 	render() {

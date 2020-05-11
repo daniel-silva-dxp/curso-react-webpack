@@ -11,9 +11,9 @@ class NewTimer extends Component {
 	}
 
 	componentDidMount() {
-		this.timer = setInterval(() => {
-			this.setState({ newTime: this.state.newTime + 1 });
-		}, 1000);
+		// this.timer = setInterval(() => {
+		// 	this.setState({ newTime: this.state.newTime + 1 });
+		// }, 1000);
 	}
 
 	componentWillUnmount() {
