@@ -9,16 +9,25 @@ class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			text: 'Daniel',
-			color: 'yellow',
-			showTimer: true,
-			time: 0
+			value: 'Valor inicial'
 		};
 	}
 	render() {
 		return (
 			<div className="container">
-				<Button handleClick={() => console.log('CLICK')}>CLICK</Button>
+				<form>
+					<input
+						type="text"
+						value={this.state.value}
+						onChange={(e) => {
+							console.log(e.nativeEvent);
+							this.setState({
+								value: e.target.value
+							});
+						}}
+					/>
+				</form>
+				<div>{this.state.value}</div>
 			</div>
 		);
 	}
