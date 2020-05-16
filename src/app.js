@@ -7,7 +7,7 @@ class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			value: 'Valor inicial',
+			value: '2',
 			checked: false
 		};
 	}
@@ -15,27 +15,19 @@ class App extends React.Component {
 		return (
 			<div className="container">
 				<form>
-					<input
-						type="text"
+					<select
 						value={this.state.value}
 						onChange={(e) => {
-							console.log(e.nativeEvent);
 							this.setState({
 								value: e.target.value
 							});
 						}}
-					/>
-					<label>
-						<input type='checkbox' 
-							checked={this.state.checked}
-							onChange={(e) => this.setState({checked: e.target.checked})}
-						/>
-						CHECKBOX
-					</label>
-					<input type='radio' name='rd' value='1' /> Radio I
-					<input type='radio' name='rd' value='2' /> Radio II
+					>
+						<option value="1">Value I</option>
+						<option value="2">Value II</option>
+						<option value="3">Value III</option>
+					</select>
 				</form>
-				<div>{this.state.value}</div>
 			</div>
 		);
 	}
