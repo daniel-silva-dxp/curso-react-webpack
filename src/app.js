@@ -2,14 +2,13 @@
 import React from 'react';
 import Button from './button';
 
-const colors = [ '#F27781', '#18298C', '#04BF8A', '#F2CF1D', '#F29F05' ];
-
 // Renderizando componentes utilizando Classes
 class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			value: 'Valor inicial'
+			value: 'Valor inicial',
+			checked: false
 		};
 	}
 	render() {
@@ -26,6 +25,15 @@ class App extends React.Component {
 							});
 						}}
 					/>
+					<label>
+						<input type='checkbox' 
+							checked={this.state.checked}
+							onChange={(e) => this.setState({checked: e.target.checked})}
+						/>
+						CHECKBOX
+					</label>
+					<input type='radio' name='rd' value='1' /> Radio I
+					<input type='radio' name='rd' value='2' /> Radio II
 				</form>
 				<div>{this.state.value}</div>
 			</div>
