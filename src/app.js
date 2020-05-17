@@ -7,27 +7,33 @@ class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			value: '2',
-			checked: false
+			checked: false,
+			showDiv: false
 		};
 	}
 	render() {
 		return (
 			<div className="container">
-				<form>
-					<select
-						value={this.state.value}
-						onChange={(e) => {
-							this.setState({
-								value: e.target.value
-							});
+				<label>
+					<input
+						type="checkbox"
+						checked={this.state.checked}
+						onChange={() => {
+							this.setState(
+								{
+									checked: !this.state.checked
+								},
+								() => {
+									this.setState({
+										showDiv: this.state.checked
+									});
+								}
+							);
 						}}
-					>
-						<option value="1">Value I</option>
-						<option value="2">Value II</option>
-						<option value="3">Value III</option>
-					</select>
-				</form>
+					/>{' '}
+					Checkbox
+				</label>
+				{this.state.showDiv && <div>Olha eu aqui!</div>}
 			</div>
 		);
 	}
